@@ -50,7 +50,7 @@ public class Main {
 		coleccion = mapFactory.getList(implementacion);
 		
 		try {
-			Stream<String> lines = Files.lines(Paths.get("cartas.txt"),StandardCharsets.UTF_8);
+			Stream<String> lines = Files.lines(Paths.get("cards_desc.txt"),StandardCharsets.UTF_8);
 			lines.forEach(i->{
 				String nombre = i.substring(0, i.indexOf("|"));
 				String tipo = i.substring(i.indexOf("|")+1);
@@ -59,7 +59,6 @@ public class Main {
 		} catch (IOException e) {
 			// TODO: handle exception
 			e.printStackTrace();
-			System.out.println("nooo");
 		}
 			
 		do {
